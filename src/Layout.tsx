@@ -11,8 +11,9 @@ function Layout({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <div>
+    <>
       <header>
+        <h3 style={{ marginTop: 0 }}>React Playground</h3>
         <nav>
           <ul>
             <li>
@@ -45,11 +46,16 @@ function Layout({ children }: { children: React.ReactNode }) {
                 <Link to="/tic-tac-toe">Tic Tac Toe</Link>
               </Button>
             </li>
+            <li>
+              <Button isActive={isActive("/pagination")}>
+                <Link to="/pagination">Pagination</Link>
+              </Button>
+            </li>
           </ul>
         </nav>
       </header>
       <main>{children}</main>
-    </div>
+    </>
   );
 }
 
