@@ -1,0 +1,59 @@
+body {
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+time.clock {
+  --segment-border-width: 10px;
+  --segment-border-color: #00da12;
+  --clock-bg-color: #000;
+
+  display: inline-flex;
+  flex-wrap: nowrap;
+  padding: 20px;
+  background-color: var(--clock-bg-color);
+  border: 10px solid #999;
+  border-radius: 10px;
+  gap: 10px;
+}
+.digit {
+  background-color: transparent;
+  height: 50px;
+  width: 50px;
+  border-width: var(--segment-border-width);
+  border-style: solid;
+  border-color: transparent;
+}
+.digit-top {
+  border-bottom-width: calc(var(--segment-border-width) / 2);
+}
+.digit-bottom {
+  border-top-width: calc(var(--segment-border-width) / 2);
+}
+.digit-top-border {
+  border-top-color: var(--segment-border-color);
+}
+.digit-bottom-border {
+  border-bottom-color: var(--segment-border-color);
+}
+.digit-right-border {
+  border-right-color: var(--segment-border-color);
+}
+.digit-left-border {
+  border-left-color: var(--segment-border-color);
+}
+.separator {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.separator span {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 100%;
+  margin: 10px 0;
+}

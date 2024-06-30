@@ -35,6 +35,16 @@ function Layout({ children }: { children: React.ReactNode }) {
                 <Link to="/list">List</Link>
               </Button>
             </li>
+            <li>
+              <Button isActive={isActive("/infinite-scroll")}>
+                <Link to="/infinite-scroll">Infinite Scroll</Link>
+              </Button>
+            </li>
+            <li>
+              <Button isActive={isActive("/tic-tac-toe")}>
+                <Link to="/tic-tac-toe">Tic Tac Toe</Link>
+              </Button>
+            </li>
           </ul>
         </nav>
       </header>

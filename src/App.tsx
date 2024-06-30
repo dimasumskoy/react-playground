@@ -6,6 +6,8 @@ import Main from "./features/main/Main";
 import Counter from "./features/counter/Counter";
 import Devices from "./features/devices/Devices";
 import List from "./features/list/List";
+import InfiniteScroll from "./features/infiniteScroll/InfiniteScroll";
+import TicTacToe from "./features/tic-tac-toe/TicTacToe";
 
 import "./App.scss";
 
@@ -18,6 +20,8 @@ function App() {
           <Route path="/counter" element={<Counter />} />
           <Route path="/devices" element={<Devices />} />
           <Route path="/list" element={<List />} />
+          <Route path="/infinite-scroll" element={<InfiniteScroll />} />
+          <Route path="/tic-tac-toe" element={<TicTacToe />} />
         </Routes>
       </Layout>
     </Router>
