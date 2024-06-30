@@ -8,7 +8,7 @@ body {
 
 time.clock {
   --segment-border-width: 10px;
-  --segment-border-color: #00da12;
+  --segment-border-color: #ffffff;
   --clock-bg-color: #000;
 
   display: inline-flex;

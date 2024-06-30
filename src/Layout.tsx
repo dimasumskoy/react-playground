@@ -42,6 +42,11 @@ function Layout({ children }: { children: React.ReactNode }) {
               </Button>
             </li>
             <li>
+              <Button isActive={isActive("/clock")}>
+                <Link to="/clock">Clock</Link>
+              </Button>
+            </li>
+            <li>
               <Button isActive={isActive("/tic-tac-toe")}>
                 <Link to="/tic-tac-toe">Tic Tac Toe</Link>
               </Button>
