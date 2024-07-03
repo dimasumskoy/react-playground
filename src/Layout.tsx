@@ -56,6 +56,11 @@ function Layout({ children }: { children: React.ReactNode }) {
                 <Link to="/pagination">Pagination</Link>
               </Button>
             </li>
+            <li>
+              <Button isActive={isActive("/checkbox-move")}>
+                <Link to="/checkbox-move">Checkbox Move</Link>
+              </Button>
+            </li>
           </ul>
         </nav>
       </header>

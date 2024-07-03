@@ -40,35 +40,40 @@ const renderItem = ({ item, height, offsetY, index }: ItemProps) => {
   );
 };
 
+// the list accepts items list, item height and container height, and buffer
 const VirtualizedList = ({
   items,
   itemHeight,
   containerHeight,
   buffer = 5,
 }: ListProps) => {
+  // set up visible start and end that will be in the viewport
   const [visibleStart, setVisibleStart] = useState(0);
   const [visibleEnd, setVisibleEnd] = useState(
     Math.ceil(containerHeight / itemHeight)
   );
+  // set up container ref to get the scroll from top value
   const contaierRef = useRef<HTMLDivElement>(null);
 
+  // each scroll event being handled with handleScroll func
   const handleScroll = useCallback(() => {
     const scrollTop = contaierRef.current?.scrollTop;
 
+    // if there is scroll happened
     if (scrollTop) {
+      // visible end is the height from the top divided by item height + current visible end (that is in the end of the list) + buffer
       const newVisibleEnd = Math.min(
         items.length,
         Math.ceil(scrollTop / itemHeight + visibleEnd) + buffer
       );
+      // visible start is the height from the top divided by item height - buffer
       const newVisibleStart = Math.max(
         0,
         Math.floor(scrollTop / itemHeight) - buffer
       );
 
-      (() => {
-        setVisibleStart(newVisibleStart);
-        setVisibleEnd(newVisibleEnd);
-      })();
+      setVisibleStart(newVisibleStart);
+      setVisibleEnd(newVisibleEnd);
     }
   }, [items, itemHeight, containerHeight, buffer]);
 
@@ -85,6 +90,7 @@ const VirtualizedList = ({
   }, [handleScroll]);
 
   const visibleItems = items.slice(visibleStart, visibleEnd);
+  // offsetY is used in Item to calculate its position from the top border of the container
   const offsetY = visibleStart * itemHeight;
 
   return (
