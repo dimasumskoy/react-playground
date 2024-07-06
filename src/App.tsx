@@ -11,6 +11,7 @@ import Clock from "./features/clock/Clock";
 import TicTacToe from "./features/tic-tac-toe/TicTacToe";
 import Pagination from "./features/pagination/Pagination";
 import CheckboxMove from "./features/checkboxMove/CheckboxMove";
+import ModalContainer from "./features/modalPortal/ModalContainer";
 
 import "./App.scss";
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/tic-tac-toe" element={<TicTacToe />} />
           <Route path="/pagination" element={<Pagination />} />
           <Route path="/checkbox-move" element={<CheckboxMove />} />
+          <Route path="/modal" element={<ModalContainer />} />
         </Routes>
       </Layout>
     </Router>

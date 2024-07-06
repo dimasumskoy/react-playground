@@ -61,6 +61,11 @@ function Layout({ children }: { children: React.ReactNode }) {
                 <Link to="/checkbox-move">Checkbox Move</Link>
               </Button>
             </li>
+            <li>
+              <Button isActive={isActive("/modal")}>
+                <Link to="/modal">Modal</Link>
+              </Button>
+            </li>
           </ul>
         </nav>
       </header>

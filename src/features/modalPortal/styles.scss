@@ -1,0 +1,31 @@
+.modal-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.modal-container {
+  width: 500px;
+  height: 30vh;
+  padding: 20px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 15px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.modal-actions-top {
+  display: flex;
+  justify-content: flex-end;
+}
+.modal-overlay.active, .modal-container.active {
+  opacity: 1;
+}
