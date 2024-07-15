@@ -89,7 +89,7 @@ const InfiniteScroll = () => {
         observer.unobserve(loaderRef.current)
       }
     }
-  }, []);
+  }, [loaderRef.current]);
 
   useEffect(() => {
     loadMoreItems();

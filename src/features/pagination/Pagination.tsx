@@ -5,7 +5,7 @@ const ITEMS_PER_PAGE = 10;
 const TOTAL_ITEMS_TIMEOUT = 400;
 const FETCH_ITEMS_TIEMOUT = 600;
 
-interface Item {
+export interface Item {
   id: number;
   title: string;
   date: Date;
